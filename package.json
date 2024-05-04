@@ -4,7 +4,6 @@
   "description": "Google Cloud Pricing Calculator",
   "main": "./dist/lib/index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "prepublishOnly": "pnpm audit && rm -rf dist && pnpm exec tsc && echo \"require('./dist/lib').updateData()\" | node",
     "build": "pnpm exec tsc",
     "clean": "rm -rf dist node_modules"
